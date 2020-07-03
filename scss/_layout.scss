@@ -1,0 +1,120 @@
+// Variables
+$grey-color: #242424;
+$golden-color: #b88b58;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+$font: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
+
+// Typography
+body {
+	font-family: $font;
+	font: 400 14px/1.8 $font;
+	color: $grey-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font;
+}
+
+h1 {
+	font-size: 72px;
+	line-height: 1;
+	font-weight: 700;
+
+	@media only screen and (max-width: 1023px) {
+		font-size: 48px;
+	}
+	@media only screen and (max-width: 639px) {
+		font-size: 38px;
+	}
+	@media only screen and (max-width: 425px) {
+		font-size: 28px;
+	}
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #AEAEAE;
+}
+
+p {
+	line-height: 1.8;
+	margin-bottom: 30px;
+}
+
+// Container width
+.grid-container {
+	max-width: 1140px;
+}
+
+// Vertical spaces
+.section {
+	padding: 60px 0px;
+}
+
+[class*="__heading"] {
+	margin-bottom: 40px;
+}
+
+// Buttons style
+button {
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+a, button {
+	&:focus,
+	&:active {
+		color: inherit;
+		outline: none;
+	}
+}
+
+.main-button {
+	display: inline-block;
+	padding: 0px 50px;
+	background-color: $golden-color;
+	font-size: 12px;
+	line-height: 45px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FFF;
+	height: 45px;
+	border-radius: 45px;
+	transition: background-color .3s ease-in;
+	&:hover {
+		color: #FFF;
+		background-color: #000;
+	}
+	&--grey {
+		background-color: #373737;
+		padding: 0px 40px;
+		&:hover {
+			background-color: $golden-color;
+		}
+	}
+}
+
+// Slick slider
+.slick-slide {
+	outline: none;
+}
+
+// For smooth anchors scrolling
+html {
+	scroll-behavior: smooth;
+}
+
+
+

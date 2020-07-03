@@ -1,0 +1,115 @@
+
+.header {
+	background-color: #000000;
+	@media only screen and (max-width: 1023px) {
+		padding-top: 8px;
+	}
+}
+
+// Default menu styles
+.top-bar, .top-bar ul {
+	background-color: #000000;
+	padding: 0;
+}
+
+
+.top-bar ul {
+	@media only screen and (max-width: 1023px) {
+		padding-top: 10px;
+	}
+}
+
+.title-bar {
+	width: 100%;
+	background-color: #000;
+}
+
+
+.title-bar {
+	color: $golden-color;
+}
+
+.menu-icon{
+	&:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $golden-color;
+    -webkit-box-shadow: 0 7px 0 $golden-color, 0 14px 0 #fefefe;
+    box-shadow: 0 7px 0 $golden-color, 0 14px 0 $golden-color;
+    content: '';
+    }
+    &:hover:after {
+    	background: $golden-color;
+    	-webkit-box-shadow: 0 7px 0 $golden-color, 0 14px 0 $golden-color;
+    	box-shadow: 0 7px 0 $golden-color, 0 14px 0 $golden-color;
+    }
+}
+
+// Custom menu item styles
+.menu {
+	flex-direction: column;
+
+	@media only screen and (min-width: 1024px) {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+.menu li a {
+	font-weight: 700;
+	line-height: 1.3;
+	text-transform: uppercase;
+	color: #FFF;
+	padding: 41px 8px;
+	margin: 0 2px;
+	position: relative;
+
+	@media only screen and (max-width: 1023px) {
+		padding: 10px 8px;
+	}
+
+	@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+		padding: 43px 6px;
+		font-size: 12px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		background: $golden-color;
+		width: 0%;
+		height: 5px;
+		left: 0;
+		bottom: 0;
+		transition: all .3s ease-in;
+	}
+	&:hover:after {
+		width: 100%;
+
+		@media only screen and (max-width: 1023px) {
+			width: 0;
+		}
+	}
+	&:active, &:focus {
+		color: $golden-color;
+	}
+}
+
+// Prevent displaying mobile menu on load
+@media screen and (min-width: 320px) {
+	.title-bar {
+		display: none;
+	}
+	.top-bar {
+		display: none;
+	}
+}
+
+
+
+
+
